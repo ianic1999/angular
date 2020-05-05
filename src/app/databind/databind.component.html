@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="username">
+<p [ngStyle]="{backgroundColor: getColor()}"
+[ngClass]="{ianic: username==='ianic1999', ianec: username==='ianec1999'}">{{ username }}</p>
+<button class="btn" [disabled]="!(username.length > 0)"
+(click)="onButtonClick()">Click Me!</button>
+
+<p *ngIf="clicked">Some paragraph</p>
+
+
+<button class="btn" (click)="onDisplay()">Display Details</button>
+<p *ngIf="show">Secret Password = 'tuna'</p>
+<p *ngFor="let nr of numbers"
+[ngClass]="{bluebackground: nr > 4}">{{nr}}</p>
